@@ -1,0 +1,17 @@
+## install Maven in ubuntu-22
+
+## Ensure Java is running
+
+sudo apt install maven -y
+
+sudo nano /etc/profile.d/maven.sh
+
+export JAVA_HOME=/usr/lib/jvm/default-java
+export M2_HOME=/opt/maven
+export MAVEN_HOME=/opt/maven
+export PATH=${M2_HOME}/bin:${PATH}
+
+sudo chmod +x /etc/profile.d/maven.sh
+
+source /etc/profile.d/maven.sh
+
