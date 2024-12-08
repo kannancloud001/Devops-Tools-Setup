@@ -1,0 +1,4 @@
+## Install and Run prometheus as docker container In Ubuntu-22
+
+docker run --name prometheus -d -p 9090:9090 prom/prometheus
+
