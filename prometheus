@@ -5,6 +5,11 @@
   -v ~/prometheus/data:/prometheus \
   prom/prometheus
 
+touch prometheus.yml
+
+sudo chmod -R 777 ~/prometheus/data
+
+sudo chown -R 65534:65534 ~/prometheus/data
 
 
 wget https://github.com/prometheus/node_exporter/releases/download/v1.6.1/node_exporter-1.6.1.linux-amd64.tar.gz
