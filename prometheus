@@ -19,6 +19,8 @@ sudo mv node_exporter-1.6.1.linux-amd64/node_exporter /usr/local/bin/
 
 sudo nano /etc/systemd/system/node_exporter.service
 
+add tis line ....
+
 [Unit]
    Description=Node Exporter
    After=network.target
@@ -30,6 +32,9 @@ sudo nano /etc/systemd/system/node_exporter.service
 
    [Install]
    WantedBy=multi-user.target
+
+
+sudo useradd -rs /bin/false node_exporter
 
 sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 
