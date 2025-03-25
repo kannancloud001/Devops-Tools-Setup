@@ -65,3 +65,12 @@ scrape_configs:
 
 
 docker restart prometheus
+_________
+
+sudo ufw allow 9090/tcp
+
+sudo ufw allow 3000/tcp
+
+sudo ufw reload
+
+docker run -d --name=grafana -p 3000:3000 grafana/grafana
